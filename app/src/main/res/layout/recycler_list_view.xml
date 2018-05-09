@@ -93,35 +93,35 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/c_volume_24h"
+            android:id="@+id/c_vol"
             android:text="@string/c_vol"
             android:layout_gravity="center"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/c_market_cap"
+            android:id="@+id/c_market"
             android:text="@string/c_market"
             android:layout_gravity="center"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/c_percent_change_1h"
+            android:id="@+id/c_1h"
             android:text="@string/c_1h"
             android:layout_gravity="center"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/c_percent_change_24h"
+            android:id="@+id/c_24h"
             android:text="@string/c_24h"
             android:layout_gravity="center"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/c_percent_change_7d"
+            android:id="@+id/c_7d"
             android:text="@string/c_7d"
             android:layout_gravity="center"
             />
