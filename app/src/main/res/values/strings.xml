@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CoinMarketCap</string>
+    <string name="c_ID">coin ID</string>
+    <string name="c_name">coin name</string>
+    <string name="c_sym">coin symbol</string>
+    <string name="c_web">coin website_slug</string>
+    <string name="c_rank">coin rank</string>
+    <string name="c_cir">coin circulating_supply</string>
+    <string name="c_total">coin total_supply</string>
+    <string name="c_max">coin max_supply</string>
+    <string name="c_price">coin price</string>
+    <string name="c_vol">coin volume_24h</string>
+    <string name="c_market">coin market_cap</string>
+    <string name="c_1h">coin percent_change_1h</string>
+    <string name="c_24h">coin percent_change_24h</string>
+    <string name="c_7d">coin percent_change_7d</string>
+    <string name="c_last">coin last_updated</string>
+
+
+
+</resources>
