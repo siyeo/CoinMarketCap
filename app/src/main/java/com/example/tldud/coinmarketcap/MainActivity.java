@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -16,9 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
     RecyclerView.LayoutManager mLayoutManager;
-    String rootURL = "https://api.coinmarketcap.com/v2/ticker/?limit=10";
-    ArrayList<Coin> coinArrayList;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        listView = findViewById(R.id.re)
         mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
 
 
         //url로 값 넣어주기
@@ -37,12 +32,6 @@ public class MainActivity extends AppCompatActivity {
         //interface만들기
         //연결하는 인트로핏 만들기
         //연결해주기
-
-
-
-        //adapter() 안에도 값 넣어주기
-        MyCoinAdapter myCoinAdapter = new MyCoinAdapter(coinArrayList);
-        mRecyclerView.setAdapter(myCoinAdapter);
 
     }
 
@@ -56,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             RetrofitService service = client.getRetrofit().create(RetrofitService.class);
 
             //작성한 인터페이스에 있는 getcoininfo메서드를 이용해 api요청
-            Call<CoinResponse> coinResponseCall = service.getcoininfo();
+            Call<CoinResponse> coinResponseCall = service.getcoininfo("Coin");
             //callback 메서드 작성
             coinResponseCall.enqueue(new Callback<CoinResponse>() {
 
@@ -69,15 +58,18 @@ public class MainActivity extends AppCompatActivity {
                         ArrayList<Coin> coinArrayList = response.body().getCoinArrayList();
 
                         //recyclerView와 어댑터 클래스 셋업
-                        MyCoinAdapter myCoinAdapter = new MyCoinAdapter(Coin.class,coinArrayList);
-                        recycler_list_view.setLayoutManager(new LinearLayoutManager(mRecyclerView.this));
+                        MyCoinAdapter myCoinAdapter = new MyCoinAdapter(coinArrayList);
+                        mRecyclerView.setAdapter(myCoinAdapter);
+                        mRecyclerView.setLayoutManager(mLayoutManager);
+                    }else {
+                        Toast.makeText(MainActivity.this, "정보를 가져오지 못했습니다.",Toast.LENGTH_SHORT).show();
 
                     }
                 }
-
+                //요청 실패
                 @Override
                 public void onFailure(Call<CoinResponse> call, Throwable t) {
-
+                    Toast.makeText(MainActivity.this, "데이터를 가져오지 못했습니다.",Toast.LENGTH_SHORT).show();
                 }
             });
 

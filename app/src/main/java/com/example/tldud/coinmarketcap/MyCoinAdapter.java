@@ -3,6 +3,7 @@ package com.example.tldud.coinmarketcap;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -64,6 +65,8 @@ public class MyCoinAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     private static class ViewHolder extends RecyclerView.ViewHolder {
+
+
 
         TextView c_id;
         TextView c_name;

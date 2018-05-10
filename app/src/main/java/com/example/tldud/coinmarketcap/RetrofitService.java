@@ -1,6 +1,11 @@
 package com.example.tldud.coinmarketcap;
 
+import java.sql.Array;
+import java.util.ArrayList;
+
+import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 //api 요청을 위한 interface
 //@Query를 사용하면 &파라메터= 값으로 이어 붙인다
@@ -8,6 +13,6 @@ import retrofit2.http.GET;
 
 public interface RetrofitService {
 
-   // @GET("/v2/tickr/?limit=10")
- //   Call<CoinResponse> getcoininfo(@Query("
+    @GET("v2/ticker/?limit=10")
+    Call<CoinResponse> getcoininfo (@Query("Coin") ArrayList<Coin> coinArrayList);
 }
