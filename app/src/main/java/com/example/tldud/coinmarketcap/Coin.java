@@ -1,17 +1,29 @@
 package com.example.tldud.coinmarketcap;
 
 
+import com.google.gson.annotations.SerializedName;
 
 public class Coin {
+
+    @SerializedName("id")
     private Integer id;
+    @SerializedName("name")
     private String name;
+    @SerializedName("symbol")
     private String symbol;
+    @SerializedName("website_slug")
     private String websiteSlug;
+    @SerializedName("rank")
     private Integer rank;
+    @SerializedName("circulating_supply")
     private float circulation_supply;
+    @SerializedName("total_supply")
     private float total_supply;
+    @SerializedName("max_supply")
     private float max_supply;
+    @SerializedName("quotes")
     public Quotes quotes;
+    @SerializedName("last_updated")
     private Integer last_updated;
 
     public Coin(Integer id, String name, String symbol, String websiteSlug, Integer rank, float circulation_supply, float total_supply, float max_supply,Quotes quotes, Integer last_updated) {

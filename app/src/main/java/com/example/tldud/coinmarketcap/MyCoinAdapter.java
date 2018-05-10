@@ -3,6 +3,7 @@ package com.example.tldud.coinmarketcap;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MyCoinAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -96,6 +101,8 @@ public class MyCoinAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 }
+
+
 
 
 

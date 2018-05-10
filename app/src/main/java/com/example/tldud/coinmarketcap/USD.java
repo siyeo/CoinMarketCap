@@ -1,11 +1,20 @@
 package com.example.tldud.coinmarketcap;
 
+import com.google.gson.annotations.SerializedName;
+
 public class USD {
+
+    @SerializedName("price")
     private float price;
+    @SerializedName("volume_24h")
     private float volume_24h;
+    @SerializedName("market_cap")
     private float market_cap;
+    @SerializedName("percent_change_1h")
     private float percent_change_1h;
+    @SerializedName("percent_change_24h")
     private float percent_change_24h;
+    @SerializedName("percent_change_7d")
     private float percent_change_7d;
 
     public USD() {

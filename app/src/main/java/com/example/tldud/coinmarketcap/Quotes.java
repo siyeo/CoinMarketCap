@@ -1,8 +1,11 @@
 package com.example.tldud.coinmarketcap;
 
-public class Quotes {
-    public USD usd;
+import com.google.gson.annotations.SerializedName;
 
+public class Quotes {
+
+    @SerializedName("USD")
+    public USD usd;
 
 
     public Quotes(USD usd) {
