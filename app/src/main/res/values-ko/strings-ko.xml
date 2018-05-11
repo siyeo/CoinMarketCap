@@ -2,7 +2,7 @@
     <string name="app_name">CoinMarketCap</string>
     <string name="c_ID">coin 아이디</string>
     <string name="c_name">coin 이름</string>
-    <string name="c_sym">coin 상징</string>
+    <string name="c_sym"> 상징</string>
     <string name="c_web">coin website_slug</string>
     <string name="c_rank">coin 순위</string>
     <string name="c_cir">coin 순환 공급량</string>
