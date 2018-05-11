@@ -21,10 +21,6 @@ public class Client {
     static HeaderInterceptor mHeaderInterceptor = new HeaderInterceptor();
     static HttpLoggingInterceptor logging = getHttpLoggingInterceptorClient();
 
-    static OkHttpClient httpClient = new OkHttpClient.Builder()
-            .addInterceptor(mHeaderInterceptor)
-            .addInterceptor(logging)
-            .build();
 
     public static Retrofit getRetrofit() {
         if(retrofit == null) {
