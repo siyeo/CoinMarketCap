@@ -13,7 +13,7 @@
     <string name="c_market">coin 시가총액</string>
     <string name="c_1h">coin 1시간동안 바뀐 퍼센트</string>
     <string name="c_24h">coin 24시간동안 바뀐 퍼센트</string>
-    <string name="c_7d">coin 7일동안 바뀐 퍼센트</string>
-    <string name="c_last">coin 최근 업데이트</string>
+    <string name="c_7d"> 7일동안 바뀐 퍼센트</string>
+    <string name="c_last"> 최근 업데이트</string>
 
 </resources>
