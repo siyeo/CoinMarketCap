@@ -2,16 +2,16 @@ package com.example.tldud.coinmarketcap;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
+
+import java.util.List;
 
 public class CoinResponse {
 
     //json의 키값으로 세팅 "coin"
 
-    @SerializedName("Coin")
-    private ArrayList<Coin> coinArrayList;
+    private List<Coin> coinList;
 
-    public ArrayList<Coin> getCoinArrayList() {
-        return coinArrayList;
+    public List<Coin> getCoinList() {
+        return coinList;
     }
 }

@@ -13,6 +13,6 @@ import retrofit2.http.Query;
 
 public interface RetrofitService {
 
-    @GET("v2/ticker/?limit=10")
-    Call<CoinResponse> getcoininfo (@Query("Coin") ArrayList<Coin> coinArrayList);
+    @GET("v2/ticker/")
+    Call<CoinResponse> getCoinInfo (@Query("limit") int limit);
 }
