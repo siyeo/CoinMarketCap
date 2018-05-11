@@ -1,5 +1,9 @@
 package com.example.tldud.coinmarketcap;
 
+import com.google.gson.JsonObject;
+
+import org.json.JSONObject;
+
 import java.sql.Array;
 import java.util.ArrayList;
 
@@ -14,5 +18,5 @@ import retrofit2.http.Query;
 public interface RetrofitService {
 
     @GET("v2/ticker/")
-    Call<CoinResponse> getCoinInfo (@Query("limit") int limit);
+    Call<JsonObject> getCoinInfo (@Query("limit") int limit);
 }

@@ -43,25 +43,25 @@ public class MyCoinAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
         ViewHolder viewHolder = (ViewHolder)holder;
 
-        viewHolder.c_id.setText(coinList.get(position).getId());
+        viewHolder.c_id.setText(String.valueOf(coinList.get(position).getId()));
         viewHolder.c_name.setText(coinList.get(position).getName());
         viewHolder.c_symbol.setText(coinList.get(position).getSymbol());
         viewHolder.c_web.setText(coinList.get(position).getWebsiteSlug());
-        viewHolder.c_rank.setText(coinList.get(position).getRank());
-        viewHolder.c_cir.setText((int) coinList.get(position).getCirculation_supply());
-        viewHolder.c_total.setText((int) coinList.get(position).getTotal_supply());
-        viewHolder.c_max.setText((int) coinList.get(position).getMax_supply());
-        viewHolder.c_price.setText((int) coinList.get(position).getQuotes().getUsd().getPrice());
-        viewHolder.c_vol.setText((int) coinList.get(position).getQuotes().getUsd().getVolume_24h());
-        viewHolder.c_market.setText((int) coinList.get(position).getQuotes().getUsd().getMarket_cap());
-        viewHolder.c_1h.setText((int) coinList.get(position).getQuotes().getUsd().getPercent_change_1h());
-        viewHolder.c_24h.setText((int) coinList.get(position).getQuotes().getUsd().getPercent_change_24h());
-        viewHolder.c_7d.setText((int) coinList.get(position).getQuotes().getUsd().getPercent_change_7d());
-        viewHolder.c_last.setText(coinList.get(position).getLast_updated());
+        viewHolder.c_rank.setText(String.valueOf(coinList.get(position).getRank()));
+        viewHolder.c_cir.setText(String.valueOf(coinList.get(position).getCirculation_supply()));
+        viewHolder.c_total.setText(String.valueOf(coinList.get(position).getTotal_supply()));
+        viewHolder.c_max.setText(String.valueOf(coinList.get(position).getMax_supply()));
+        viewHolder.c_price.setText(String.valueOf( coinList.get(position).getQuotes().getUsd().getPrice()));
+        viewHolder.c_vol.setText(String.valueOf( coinList.get(position).getQuotes().getUsd().getVolume_24h()));
+        viewHolder.c_market.setText(String.valueOf( coinList.get(position).getQuotes().getUsd().getMarket_cap()));
+        viewHolder.c_1h.setText(String.valueOf( coinList.get(position).getQuotes().getUsd().getPercent_change_1h()));
+        viewHolder.c_24h.setText(String.valueOf( coinList.get(position).getQuotes().getUsd().getPercent_change_24h()));
+        viewHolder.c_7d.setText(String.valueOf(coinList.get(position).getQuotes().getUsd().getPercent_change_7d()));
+        viewHolder.c_last.setText(String.valueOf(coinList.get(position).getLast_updated()));
 
     }
 

@@ -40,6 +40,9 @@ public class Coin {
     }
 
     public Integer getId() {
+        if(id == null){
+            return 0;
+        }
         return id;
     }
 
@@ -72,6 +75,9 @@ public class Coin {
     }
 
     public Integer getRank() {
+        if(rank == null){
+            return 0;
+        }
         return rank;
     }
 
